@@ -32,7 +32,7 @@
                                 <th>电话</th>
                                 <th>地点</th>
                                 <th>更新时间</th>
-                                <th>播放</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -43,13 +43,8 @@
                                 <td>{{item.name}}</td>
                                 <td>{{item.tel}}</td>
                                 <td>{{item.addr}}</td>
-                                <td>{{item.updateTime|msDateFormat:'YYYY-MM-DD'}}</td>
-                                <td>
-                                    <div audio-playable="item.url" play-trigger=".audio-play"  pause-trigger=".audio-pause">
-                                        <button class="btn btn-primary audio-play" ng-show="!audioInfo.playing" >播放</button>
-                                        <button class="btn btn-primary audio-pause" ng-show="audioInfo.playing" >暂停</button>
-                                    </div>
-                                </td>
+                                <td>{{item.updateTime|dateFormat:'YYYY-MM-DD'}}</td>
+                                
                             </tr>
                         </tbody>
 
